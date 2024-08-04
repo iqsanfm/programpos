@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Categories</title>
+  </head>
+  <body>
+    <h1>Categories</h1>
+    <ul>
+      <% categories.forEach(category => { %>
+      <li>
+        <h2><%= category.name %></h2>
+        <ul>
+          <% category.items.forEach(item => { %>
+          <li><%= item.name %>: <%= item.price %> <%= item.stock %></li>
+          <% }) %>
+        </ul>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
